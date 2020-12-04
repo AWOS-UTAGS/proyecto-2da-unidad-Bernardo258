@@ -1,9 +1,9 @@
 const express = require('express');
 const _ = require('underscore');
-const app = express;
+const app = express();
 const Categoria = require('../models/categoria');
 
-app.length('/categoria', (req, res) => {
+app.get('/categoria', (req, res) => {
     let desde = req.query.desde || 0;
     let hasta = req.query.hasta || 5;
 
